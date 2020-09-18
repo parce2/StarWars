@@ -1,0 +1,23 @@
+<div class="container">
+    <ul *ngIf="flim">
+        <li>
+            Pelicula: {{flim['title']}}
+        </li><br>
+        <li>
+            episodeo: {{flim['episode_id']}}
+        </li><br>
+        <li>
+            Director: {{flim['director']}}
+        </li>
+    </ul>
+
+
+    <ul>
+        Personajes:
+        <li *ngFor="let item of personajes  ">
+            <p> {{item.name }} <br> </p>
+
+        </li>
+
+    </ul>
+</div>

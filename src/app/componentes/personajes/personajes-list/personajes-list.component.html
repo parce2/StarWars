@@ -1,0 +1,23 @@
+<div class="container">
+    <form>
+        <input type="text" name="textobuscar" #dato (keyup)="buscar(dato.value)" placeholder="Buscar">
+
+    </form>
+
+</div>
+
+
+<div class="container">
+
+    <div class="item2" *ngFor="let item of allpersona |filter : textobuscar">
+
+        <h4>Personaje: {{item.name}}</h4>
+        <ul>
+            <li> Color de ojos: {{item.eye_color}} </li>
+            <li>Genero: {{item.gender}} </li>
+            <!--   <li> peliculas: <span *ngFor="let film of item.films"> {{ film}}</span></li>-->
+        </ul>
+
+    </div>
+
+</div>
